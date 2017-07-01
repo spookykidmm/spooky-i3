@@ -10,6 +10,7 @@ cp compton.conf ~/.config
 cp .fehbg ~/
 cp death ~/
 cp revengeinstaller1.jpg ~/
+cd $HOME
 git clone https://github.com/zagortenay333/Harmattan
 cd ~/Harmattan
 cp -r .harmattan-assets ~/
