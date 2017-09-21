@@ -13,12 +13,18 @@ general {
 
 order += "battery_level"
 order += "clock"
+order += "timer"
 order += "sysdata"
 order += "volume_status"
 order += "mpris"
 order += "screenshot"
 order += "backlight"
 order += "arch_updates"
+order += "kdeconnector"
+
+timer {
+format = "Timer {timer}"
+}
 
 battery_level {
         battery_id  = all
@@ -49,6 +55,11 @@ screenshot_command = "scrot -q 100"
 }
 
 backlight {
+}
+
+kdeconnector {
+device_id = "4024db3a77a4165a"
+format = "{name} {bat_status} {charge}   "
 }
 
 arch_updates {

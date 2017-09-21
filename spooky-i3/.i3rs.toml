@@ -1,0 +1,31 @@
+theme = "plain" 
+icons = "awesome"
+
+[[block]]
+block = "memory"
+display_type = "memory"
+format_mem = "{Mug}/{MTg}"
+
+[[block]]
+block = "custom"
+on_click = "scrot -e 'mv $f ~/Pictures'"
+cycle = ["echo scrot"]
+
+[[block]]
+block  = "battery"
+
+[[block]]
+block = "sound"
+
+[[block]]
+block = "pacman"
+
+[[block]]
+block = "music"
+player = "pragha"
+buttons = ["prev", "play", "next"]
+
+[[block]]
+block = "time"
+interval = 1
+format = "%a %m/%d %R"
