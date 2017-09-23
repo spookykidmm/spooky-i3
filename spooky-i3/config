@@ -153,7 +153,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 
 bar {
-    status_command py3status
+    status_command i3status-rs ~/.config/i3/i3rs.toml
     position top
     height 25
     workspace_buttons yes
@@ -167,7 +167,7 @@ bar {
 # workspace_buttons yes
 # }
 # bar {
-# status_command i3status-rs ~/.i3rs.toml
+# status_command py3status
 # position top
 # height 25
 # workspace_buttons yes

@@ -1,10 +1,10 @@
-theme = "plain" 
+theme = "solarized-dark" 
 icons = "awesome"
 
 [[block]]
 block = "memory"
 display_type = "memory"
-format_mem = "{Mug}/{MTg}"
+format_mem = "{Mum}MiB/{MTg}GiB"
 
 [[block]]
 block = "custom"
@@ -29,3 +29,14 @@ buttons = ["prev", "play", "next"]
 block = "time"
 interval = 1
 format = "%a %m/%d %R"
+
+[[block]]
+block = "custom"
+command = "echo Brightness:$(light)"
+on_click = "sh /bl.sh"
+interval = 5
+
+[[block]]
+block = "custom"
+command = "echo Tools"
+on_click = "revenge-tools"

@@ -8,7 +8,8 @@ mkdir -p ~/.config/i3/config
 cp config ~/.config/i3/config
 echo $pwd | sudo -S cp i3status.conf /etc/
 cp .bs.sh ~/
-cp .i3rs.toml ~/
+sudo cp bl.sh /
+cp i3rs.toml ~/.config/i3/
 cp compton.conf ~/.config
 cp .fehbg ~/
 cp death ~/
