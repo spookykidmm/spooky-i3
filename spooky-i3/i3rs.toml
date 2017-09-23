@@ -8,8 +8,9 @@ format_mem = "{Mum} MiB/{MTg} GiB"
 
 [[block]]
 block = "custom"
+
 on_click = "scrot -e 'mv $f ~/Pictures'"
-cycle = ["echo scrot"]
+command = "echo " 
 
 [[block]]
 block  = "battery"
