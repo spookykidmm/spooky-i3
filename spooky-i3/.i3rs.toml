@@ -1,0 +1,42 @@
+theme = "solarized-dark" 
+icons = "awesome"
+
+[[block]]
+block = "memory"
+display_type = "memory"
+format_mem = "{Mum} MiB/{MTg} GiB"
+
+[[block]]
+block = "custom"
+on_click = "zsh scrotscript"
+command = "echo "
+
+[[block]]
+block = "sound"
+
+[[block]]
+block = "pacman"
+
+[[block]]
+block = "music"
+player = "pragha"
+buttons = ["prev", "play", "next"]
+
+[[block]]
+block = "custom"
+command = "echo   $(aurcheck -q -d revenge_repo | wc -l):$(aurcheck -q -d spooky_aur | wc -l)"
+interval = 5
+
+[[block]]
+block = "custom"
+command = "echo   Tools"
+on_click = "revenge-tools"
+
+[[block]]
+block = "custom"
+command = "iwgetid -r"
+on_click = "terminator -x nmtui"
+interval = 5
+
+
+
