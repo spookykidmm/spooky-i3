@@ -1,4 +1,4 @@
-theme = "solarized-dark" 
+theme = "slick" 
 icons = "awesome"
 
 [[block]]
@@ -8,8 +8,11 @@ format_mem = "{Mum} MiB/{MTg} GiB"
 
 [[block]]
 block = "custom"
-on_click = "zsh scrotscript"
-command = "echo "
+on_click = "cd Pictures;scrot"
+command = "echo " 
+
+[[block]]
+block  = "battery"
 
 [[block]]
 block = "sound"
@@ -23,20 +26,16 @@ player = "pragha"
 buttons = ["prev", "play", "next"]
 
 [[block]]
+block = "time"
+format = "%a %m/%d %R"
+
+[[block]]
 block = "custom"
-command = "echo   $(aurcheck -q -d revenge_repo | wc -l):$(aurcheck -q -d spooky_aur | wc -l)"
+command = "iwgetid -r"
 interval = 5
+on_click = "terminator -e nmtui"
 
 [[block]]
 block = "custom"
 command = "echo   Tools"
 on_click = "revenge-tools"
-
-[[block]]
-block = "custom"
-command = "iwgetid -r"
-on_click = "terminator -x nmtui"
-interval = 5
-
-
-

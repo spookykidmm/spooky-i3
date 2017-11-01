@@ -58,7 +58,7 @@ bindsym $mod+Shift+j move left
 bindsym $mod+Shift+k move down
 bindsym $mod+Shift+l move up
 bindsym $mod+Shift+semicolon move right
-
+bindsym button2 exec jgmenu_run pmenu
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
@@ -153,16 +153,16 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 
 bar {
-    i3bar_command i3bar -t
-    status_command i3status-rs ~/.i3rs.toml
+    i3bar_command i3bar
+    status_command i3status-rs ~/.config/i3/bars/.i3rs.toml
     position top
     height 25
     workspace_buttons yes
 }
 
 bar {
-   i3bar_command i3bar -t
-   status_command sh .bs.sh
+   i3bar_command i3bar
+   status_command sh ~/.config/i3/bars/.bs.sh
    position bottom
    height 25
    workspace_buttons yes
@@ -191,8 +191,5 @@ exec compton -b
 exec ~/.fehbg 
 exec dunst 
 exec clipmenud 
-exec /usr/lib/kdeconnectd 
-exec indicator-kdeconnect 
-exec sh death 
 exec light -S 0.00 
 

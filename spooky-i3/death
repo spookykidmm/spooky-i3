@@ -1,3 +1,0 @@
-#!/bin/sh
-
-conky -c "~/Harmattan/.harmattan-themes/Ciliora-Secunda-v2/God-Mode/normal-mode/.conkyrc" &
