@@ -13,7 +13,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:DejaVuSansMono Nerd Font Bold Italic 8.5
+font pango:IBM Plex Mono SemiBold 8.5
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -152,17 +152,10 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 
 bar {
-    i3bar_command i3bar
-    status_command i3status-rs ~/.config/i3/bars/.i3rs.toml
-    position top
-    height 25
-    workspace_buttons yes
-}
-
-bar {
    i3bar_command i3bar
    # status_command ./go/src/github.com/XANi/uberstatus/uberstatus
-   status_command sh ~/.config/i3/bars/.bs.sh
+   # status_command sh ~/.config/i3/bars/.bs.sh
+   status_command py3status
    position bottom
    height 25
    workspace_buttons yes
@@ -177,7 +170,6 @@ bindsym XF86AudioPrev  exec playerctl previous
 bindsym XF86AudioNext exec playerctl next
 bindsym $mod+Delete exec oblogout
 bindsym $mod+n exec terminator -e "nmtui"
-bindsym $mod+y exec green-recorder
 for_window [class="Oblogout" instance="oblogout"] floating toggle fullscreen toggle
 bindsym $mod+Insert exec scrot;exec rsync *_scrot.png ~/Pictures
 bindsym $mod+d exec rofi -show drun
@@ -185,8 +177,7 @@ bindsym $mod+t exec rofi -show run
 bindsym $mod+Home exec jgmenu
 bindsym $mod+c exec clipmenu
 bindsym $mod+Shift+t exec tilix 
-exec kdeconnectd
-exec indicator-kdeconnect
+exec mullvad-vpn
 exec /usr/bin/lxpolkit  
 exec compton -b 
 exec ~/.fehbg 
